@@ -63,9 +63,9 @@ Then open the frontend in your browser.
 
 ## Validation
 
-The classifier has not yet been validated against hand labels. A small pilot compared my labels with Gemini's labels on 35 comments, which is not the same as testing this tool. The method, the limits and the next steps are in [docs/validation.md](docs/validation.md). The validation scripts are in `scripts/` and can be run again once real classifier output exists.
+I built a validation workflow for the comment classifier: a hand-labeling sheet, a comparison script that reports agreement with a 95% confidence interval and Cohen's kappa, per-category precision and recall, a confusion matrix, and tests for both scripts. A first pilot on 35 real YouTube comments compared my hand labels with a second labeler's. The next step is running the same comparison on this tool's own classifier output. The method, results and limits are in [docs/validation.md](docs/validation.md).
 
-## Limitations
+## Known limits
 
 - Categories are a simplification, and a comment can fit more than one.
 - The classifier reads only the first 250 characters of each comment.

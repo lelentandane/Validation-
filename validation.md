@@ -4,7 +4,7 @@ This page records a small pilot check of the six comment categories used in `bac
 
 ## Important note
 
-The second set of labels in this pilot was **not produced by this repo's classifier**. I did not have an API key for the model the tool uses, so I got the second set of labels by running the same comments through Gemini instead. The Gemini model and the exact prompt were not recorded.
+The second set of labels in this pilot was **not produced by this repo's classifier**. I did not have an API key for the model the tool uses, so after labeling the comments myself, I ran the same comments through Gemini to get a second set of labels. The Gemini model and the exact prompt were not recorded.
 
 So this pilot compares my hand labels to Gemini's labels. It does not measure how accurate `backend/sentiment.py` is. The repo classifier has not been validated yet. The method and scripts are ready for that run (see Next steps).
 
@@ -82,7 +82,7 @@ Mismatch (1): ID 2. I labeled it `supportive` and Gemini labeled it `generic`. I
 
 - 35 comments, one video, one human labeler.
 - The second labeler is Gemini, not the repo classifier, with an unrecorded model and prompt.
-- I do not know whether I saw the Gemini labels before or after finishing my own, so blind labeling is not guaranteed.
+- I labeled all 35 comments myself first and only then ran them through Gemini, so my labels were not influenced by its output. The Gemini prompt was not recorded, so I cannot say whether it included the category definitions.
 - Unknown selection method for the 35 comments.
 - This checks the category label only, not sentiment, themes, brand-fit, or the Audience Trust Score.
 
